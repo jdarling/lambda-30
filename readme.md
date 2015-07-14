@@ -10,6 +10,13 @@ Install
 npm install lambda-30
 ```
 
+Testing
+---
+
+```shell
+npm test
+```
+
 Usage
 ---
 
