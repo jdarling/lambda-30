@@ -24,7 +24,7 @@ Usage
 
 ```javascript
 var L = require('lambda-30').Lambda;
-var f = new L('(a, b)=>a+b';
+var f = L('(a, b)=>a+b');
 var val = f(5, 8);
 // val is 13
 f = L('$.a+$.b'); // No params supplied used $ as self reference
@@ -37,7 +37,7 @@ val = f({a: 3, b: 5});
 ```javascript
 var Lambda = require('lambda-30').Lambda;
 var L = new Lambda({selfSymbol: 'self'});
-var f = L('self.a+self.b');
+var f = L.compile('self.a+self.b');
 var val = f({a: 3, b: 5});
 // val is 8
 ```
