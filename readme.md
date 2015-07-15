@@ -40,6 +40,9 @@ var L = new Lambda({selfSymbol: 'self'});
 var f = L.compile('self.a+self.b');
 var val = f({a: 3, b: 5});
 // val is 8
+// or you can do
+var val = L.execute({a: 3, b: 5});
+// val is still 8
 ```
 
 ###Multi-line

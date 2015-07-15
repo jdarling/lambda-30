@@ -39,6 +39,28 @@ describe('Lambda', function(){
       done();
     });
   });
+  describe('Compiler', function(){
+    it('Should compile a function', function(done){
+      var L = new Lambda({selfSymbol: 'self'});
+      var f = L.compile('self.a+self.b');
+      assert(typeof(f)==='function');
+      done();
+    });
+    it('Should return a compiled function for execution', function(done){
+      var L = new Lambda({selfSymbol: 'self'});
+      var f = L.compile('self.a+self.b');
+      var val = f({a: 3, b: 5});
+      assert(val===8);
+      done();
+    });
+    it('Should remember the latest compiled function for execution', function(done){
+      var L = new Lambda({selfSymbol: 'self'});
+      var f = L.compile('self.a+self.b');
+      var val = L.execute({a: 3, b: 5});
+      assert(val===8);
+      done();
+    });
+  });
   describe('Interperter', function(){
     it('Should be able to execute a static value "foo"', function(done){
       var e = Lambda('"foo"');
