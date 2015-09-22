@@ -1,5 +1,6 @@
+var Lambda = require('./lib/lambda');
 module.exports = {
-  Lambda: require('./lib/lambda')
+  Lambda: Lambda
 };
 if(typeof(window)!=='undefined'){
   window.Lambda = Lambda;
