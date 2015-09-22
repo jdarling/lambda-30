@@ -1,6 +1,6 @@
 {
   "name": "lambda-30",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Lambda String implementation for Node.js that supports some ES6",
   "main": "index.js",
   "directories": {
